@@ -7,6 +7,8 @@ import { AboutUsComponent } from './Pages/about-us/about-us.component';
 import { WhyWnlComponent } from './Pages/why-wnl/why-wnl.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
+import { NavbarComponent } from './Shared/layout/navbar/navbar.component';
+import { FooterComponent } from './Shared/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
     WhyWnlComponent,
     HomeComponent,
     ContactUsComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
