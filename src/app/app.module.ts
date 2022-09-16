@@ -9,6 +9,10 @@ import { HomeComponent } from './Pages/home/home.component';
 import { ContactUsComponent } from './Pages/contact-us/contact-us.component';
 import { NavbarComponent } from './Shared/layout/navbar/navbar.component';
 import { FooterComponent } from './Shared/layout/footer/footer.component';
+import { BlogComponent } from './Pages/blog/blog.component';
+import { DetailsComponent } from './Pages/blog/details/details.component';
+import { FormComponent } from './layout/form/form.component';
+import { SendmoneyComponent } from './shared/layout/sendmoney/sendmoney.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { FooterComponent } from './Shared/layout/footer/footer.component';
     ContactUsComponent,
     NavbarComponent,
     FooterComponent,
+    BlogComponent,
+    DetailsComponent,
+    FormComponent,
+    SendmoneyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

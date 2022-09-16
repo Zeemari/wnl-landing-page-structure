@@ -1,0 +1,84 @@
+<section class="bg-light text-center text-dark">
+  <div class="container">
+    <div class="row">
+      <h1>Sign Up</h1>
+    </div>
+
+    <div class="mb-3 row">
+      <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First Name"
+          aria-label="default input example"
+        />
+      </div>
+    </div>
+
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label"
+        >Middle Name</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Middle Name"
+          aria-label="default input example"
+        />
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label"
+        >Last Name</label
+      >
+      <div class="col-sm-10">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last Name"
+          aria-label="default input example"
+        />
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3 row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-sm-2 col-form-label"
+        >Password</label
+      >
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword" />
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="row">
+      <div class="col-12">
+        <button
+          class="btn btn-outline-success"
+          type="submit"
+          (click)="submit()"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
