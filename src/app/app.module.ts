@@ -12,7 +12,7 @@ import { FooterComponent } from './Shared/layout/footer/footer.component';
 import { BlogComponent } from './Pages/blog/blog.component';
 import { DetailsComponent } from './Pages/blog/details/details.component';
 import { FormComponent } from './layout/form/form.component';
-import { SendmoneyComponent } from './shared/layout/sendmoney/sendmoney.component';
+import { SendmoneyComponent } from './Shared/layout/sendmoney/sendmoney.component';
 
 @NgModule({
   declarations: [

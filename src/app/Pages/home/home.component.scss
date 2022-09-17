@@ -47,6 +47,14 @@
   font-weight: 500;
 }
 
+.emphasized {
+  font-style: italic;
+}
+
+.bg-info {
+  background: #080f50 !important ;
+}
+
 @media (max-width: 575.98px) {
   .font-color {
     font-size: 30px;
