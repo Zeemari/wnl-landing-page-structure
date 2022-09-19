@@ -13,6 +13,9 @@ import { BlogComponent } from './Pages/blog/blog.component';
 import { DetailsComponent } from './Pages/blog/details/details.component';
 import { FormComponent } from './layout/form/form.component';
 import { SendmoneyComponent } from './Shared/layout/sendmoney/sendmoney.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CommonInterceptor } from './common.interceptor';
+import { FaqComponent } from './Pages/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,12 @@ import { SendmoneyComponent } from './Shared/layout/sendmoney/sendmoney.componen
     DetailsComponent,
     FormComponent,
     SendmoneyComponent,
+    FaqComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

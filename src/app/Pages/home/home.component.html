@@ -79,7 +79,10 @@
           class="img-fluid img-content mb-4"
         />
       </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mt-4">
+      <div
+        class="col-12 col-md-6 col-lg-3 mb-4 mt-4"
+        *ngFor="let time of times"
+      >
         <div class="card bg-secondary border-light">
           <div class="col-12 text-start p-3">
             <img
@@ -89,14 +92,14 @@
             />
           </div>
           <div class="card-body text-start">
-            <h5 class="card-title solid-style">Easy</h5>
+            <h5 class="card-title solid-style">{{ time.name }}</h5>
             <p class="card-text">
-              Make your first transfer in less than 5 minutes
+              {{ time.text }}
             </p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mt-4">
+      <!-- <div class="col-12 col-md-6 col-lg-3 mb-4 mt-4">
         <div class="card bg-secondary border-light">
           <div class="col-12 text-start p-3">
             <img
@@ -112,8 +115,8 @@
             </p>
           </div>
         </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 mb-4 mt-4">
+      </div> -->
+      <!-- <div class="col-12 col-md-6 col-lg-3 mb-4 mt-4">
         <div class="card bg-secondary border-light">
           <div class="col-12 text-start p-3">
             <img
@@ -130,7 +133,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <app-sendmoney></app-sendmoney>
   </div>
@@ -150,78 +153,20 @@
         class="img-fluid img-content mb-4"
       />
     </div>
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
+    <div class="col-12 col-md-6 col-lg-3 mb-5" *ngFor="let card of cards">
       <div class="bg-light border shadow border-light rounded text-dark">
-        <div class="card border-light mb-3" style="max-width: 18rem">
+        <div class="card border-light" style="max-width: 20rem">
           <div class="row justify-content-center">
             <div
               class="col-2 rounded-5 rounded-circle border p-2 mt-5 mb-3 text-light"
             >
-              <h3 class="fs-4">1</h3>
+              <h3 class="fs-4">{{ card.id }}</h3>
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title solid-style">Create an Account</h5>
-            <p class="card-text mb-4">
-              Sign up online for free. All you need is an email address.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <div class="bg-light border shadow border-light rounded text-dark">
-        <div class="card border-light mb-3" style="max-width: 18rem">
-          <div class="row justify-content-center">
-            <div
-              class="col-2 rounded-5 rounded-circle border p-2 mt-5 mb-3 text-light"
-            >
-              <h3 class="fs-4">2</h3>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title solid-style">Set up Transfer</h5>
-            <p class="card-text mb-4">
-              Enter easy transfer details such as amount and recipient details.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <div class="bg-light border shadow border-light rounded text-dark">
-        <div class="card border-light mb-3" style="max-width: 18rem">
-          <div class="row justify-content-center">
-            <div
-              class="col-2 rounded-5 rounded-circle border p-2 mt-5 mb-3 text-light"
-            >
-              <h3 class="fs-4">3</h3>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title solid-style">Pay for transfer</h5>
-            <p class="card-text mb-4">
-              Send your money with a bank transfer, or a debit or credit card.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-3 mb-4">
-      <div class="bg-light border shadow border-light rounded text-dark">
-        <div class="card border-light mb-3" style="max-width: 18rem">
-          <div class="row justify-content-center">
-            <div
-              class="col-2 rounded-5 rounded-circle border p-2 mt-5 mb-3 text-light"
-            >
-              <h3 class="fs-4">4</h3>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title solid-style">Relax</h5>
+            <h5 class="card-title solid-style">{{ card.name }}</h5>
             <p class="card-text">
-              We'll handle the rest. You can track your transfer in your account
-              easily.
+              {{ card.text }}
             </p>
           </div>
         </div>
@@ -286,189 +231,122 @@
   </div>
 </section>
 
-<section class="bg-light text-dark p-2 text-center">
+<section class="bg-light p-2 text-center">
   <div class="container">
     <div class="row">
       <h2 class="text-center solid-style my-4">Our customers don't lie!</h2>
       <p class="text-center solid-style mt-1 fw-normal">
         DONT TAKE OUR WORD, LISTEN TO REAL USERS
       </p>
-      <div class="row justify-content-center mt-4">
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card border-light mb-3" style="max-width: 18rem">
-            <div class="card-text">
-              <p class="text-start fw-light fs-6 fst-italic">
-                Easy to use, set it up myself in a few minutes. I also like the
-                fact that I can easily redo my frequent transactions
-              </p>
-            </div>
-            <div
-              class="card-body d-flex align-items-center justify-content-start"
-            >
-              <img
-                src="../assets/images/Oval.svg"
-                alt="Ejiro"
-                class="img-fluid"
-              />
-              <p class="text-start ms-3">
-                <strong> Ejiro</strong> <br />
-                <span class="emphasized"> Limrick, Ireland</span>
-              </p>
-            </div>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="true"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-indicators mt-5">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active bg-info"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+              class="bg-info"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+              class="bg-info"
+            ></button>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-4">
-          <div class="card border-light mb-3" style="max-width: 18rem">
-            <div class="card-text">
-              <p class="text-start fw-light fs-6 fst-italic">
-                Trustworthy, the customer care was very helpful and I was able
-                to setup and have my money transferred
-              </p>
+          <div class="row justify-content-center mt-4 mb-5">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div
+                class="card border-light mb-3 carousel-item active"
+                style="max-width: 18rem"
+              >
+                <div class="card-text">
+                  <p class="text-start fw-light fs-6 fst-italic">
+                    Easy to use, set it up myself in a few minutes. I also like
+                    the fact that I can easily redo my frequent transactions
+                  </p>
+                </div>
+                <div
+                  class="card-body d-flex align-items-center justify-content-start"
+                >
+                  <img
+                    src="../assets/images/Oval.svg"
+                    alt="Ejiro"
+                    class="img-fluid"
+                  />
+                  <p class="text-start ms-3">
+                    <strong> Ejiro</strong> <br />
+                    <span class="emphasized"> Limrick, Ireland</span>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div
-              class="card-body d-flex align-items-center justify-content-start"
-            >
-              <img
-                src="../assets/images/Oval (1).svg"
-                alt="Tomiwa"
-                class="img-fluid"
-              />
-              <p class="text-start ms-3">
-                <strong>Tomiwa</strong> <br />
-                <span class="emphasized"> Carlifonia, United States</span>
-              </p>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div
+                class="card border-light mb-3 carousel-item active"
+                style="max-width: 18rem"
+              >
+                <div class="card-text">
+                  <p class="text-start fw-light fs-6 fst-italic">
+                    Trustworthy, the customer care was very helpful and I was
+                    able to setup and have my money transferred
+                  </p>
+                </div>
+                <div
+                  class="card-body d-flex align-items-center justify-content-start"
+                >
+                  <img
+                    src="../assets/images/Oval (1).svg"
+                    alt="Tomiwa"
+                    class="img-fluid"
+                  />
+                  <p class="text-start ms-3">
+                    <strong>Tomiwa</strong> <br />
+                    <span class="emphasized"> Carlifonia, United States</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
 
 <!-- The Frequently Asked Question -->
-<section class="bg-secondary text-center text-dark p-2">
-  <div class="container">
-    <div class="col-12">
-      <div class="row">
-        <p class="text-start h6 p-4">Frequently Asked Question</p>
-        <div
-          class="d-flex align-items-center justify-content-between border bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border-bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border-bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border-bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border-bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div
-          class="d-flex align-items-center justify-content-between border-bottom"
-        >
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-        <div class="d-flex align-items-center justify-content-between">
-          <p>How safe is using WNL for my transfers?</p>
-          <p>+</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-5 mb-4 mt-5">
-          <div class="col-12 mb-4 bg-secondary p-5 text-start">
-            <h1 class="fs-4 solid-style my-4">
-              Need help? <br />Just reach out.
-            </h1>
-            <div class="col-12 ms-4">
-              <p class="fs-6 fw-light">
-                <strong>
-                  We are always available via phone and chat, our customers are
-                  our MVP's and we have your back always. We have lots of
-                  information in our app, but please reach out if you have more
-                  questions.</strong
-                >
-              </p>
-            </div>
-            <p class="fw-normal fs-6">
-              Call us on +2234884447483 / +447023893280
-            </p>
-            <p class="fw-normal fs-6">Email us @WNL.com</p>
-            <p class="fw-normal fs-6">Use our 24/7 Live Chat System</p>
-            <div class="row">
-              <div class="col-3">
-                <img
-                  src="../assets/images/telegram 1.svg"
-                  alt="telegram"
-                  class="img-fluid ms-3"
-                />
-              </div>
-              <div class="col-3">
-                <img
-                  src="../assets/images/Object.svg"
-                  alt="twitter"
-                  class="img-fluid ms-3"
-                />
-              </div>
-              <div class="col-3">
-                <img
-                  src="../assets/images/Object (1).svg"
-                  alt="facebook"
-                  class="img-fluid ms-3"
-                />
-              </div>
-              <div class="col-3">
-                <img
-                  src="../assets/images/Object (2).svg"
-                  alt="google"
-                  class="img-fluid ms-3"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-7">
-          <div class="col-12 bg-info p-5">
-            <img
-              src="../assets/images/Group 5201.svg"
-              alt="faq image"
-              class="img-fluid"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<app-faq></app-faq>
 
 <!-- The Footer Section -->
